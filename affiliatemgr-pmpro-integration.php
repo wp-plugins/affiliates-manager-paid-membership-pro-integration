@@ -3,8 +3,8 @@
 Plugin Name: Affiliates Manager Paid Membership Pro Integration
 Plugin URI: https://wpaffiliatemanager.com
 Description: Process an affiliate commission via Affiliates Manager after a Paid Membership Pro checkout.
-Version: 1.0
-Author: wp.insider
+Version: 1.0.2
+Author: wp.insider, affmngr
 Author URI: https://wpaffiliatemanager.com
 */
 
@@ -13,9 +13,13 @@ function wpam_pmpro_after_checkout($user_id)
 {
     WPAM_Logger::log_debug('Paid Membership Pro Integration - after checkout hook fired.');
     $strRefKey = NULL;
-    if(isset( $_COOKIE[WPAM_PluginConfig::$RefKey])){
+    if(isset( $_COOKIE['wpam_id'])){
+        $strRefKey = $_COOKIE['wpam_id'];
+    }
+    else if(isset( $_COOKIE[WPAM_PluginConfig::$RefKey])){
         $strRefKey = $_COOKIE[WPAM_PluginConfig::$RefKey];
     }
+    
     if(isset($strRefKey))
     {
         WPAM_Logger::log_debug('Paid Membership Pro Integration - Tracking data present. Need to track affiliate commission. Tracking value: '.$strRefKey);

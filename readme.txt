@@ -1,10 +1,10 @@
 === Affiliates Manager Paid Membership Pro Integration ===
-Contributors: wp.insider, wpaffiliatemgr
+Contributors: wp.insider, wpaffiliatemgr, affmngr
 Donate link: https://wpaffiliatemanager.com/
 Tags: paid membership pro, membership, membership, affiliate, affiliates, users, affiliates manager, integration
 Requires at least: 3.8
 Tested up to: 4.2
-Stable tag: 1.0
+Stable tag: 1.0.2
 License: GPLv2 or later
 
 Process an affiliate commission via Affiliates Manager after a Paid Membership Pro checkout
@@ -32,6 +32,9 @@ Check the following page for screenshots
 https://wpaffiliatemanager.com/
 
 == Changelog ==
+
+= 1.0.2 =
+* Made some improvements to the commission tracking option
 
 = 1.0 =
 * First commit to wordpress.org
